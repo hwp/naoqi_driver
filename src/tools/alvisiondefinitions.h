@@ -78,6 +78,7 @@ namespace AL
   const int kXYZColorSpace = 19;
   const int kInfraredColorSpace = 20;
   const int kDistanceColorSpace = 21;
+  const int kRawDepthColorSpace = 23;
 
   const int kCameraBrightnessID       = 0;
   const int kCameraContrastID         = 1;
