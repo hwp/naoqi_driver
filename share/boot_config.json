@@ -5,29 +5,29 @@
     "front_camera":
     {
       "enabled"       : true,
-      "resolution"    : 1,
-      "fps"           : 30,
+      "resolution"    : 2,
+      "fps"           : 10,
       "recorder_fps"  : 5
     },
     "bottom_camera":
     {
       "enabled"       : true,
       "resolution"    : 1,
-      "fps"           : 30,
+      "fps"           : 10,
       "recorder_fps"  : 5
     },
     "depth_camera":
     {
       "enabled"       : true,
-      "resolution"    : 1,
-      "fps"           : 30,
+      "resolution"    : 2,
+      "fps"           : 10,
       "recorder_fps"  : 5
     },
     "ir_camera":
     {
       "enabled"       : true,
-      "resolution"    : 1,
-      "fps"           : 30,
+      "resolution"    : 2,
+      "fps"           : 10,
       "recorder_fps"  : 5
     },
     "info":
@@ -72,7 +72,7 @@
     },
     "audio":
     {
-      "enabled"       : true
+      "enabled"       : false
     },
     "bumper":
     {
