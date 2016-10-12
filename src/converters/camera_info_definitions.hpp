@@ -57,11 +57,11 @@ inline sensor_msgs::CameraInfo createCameraInfoTOPQVGA()
   cam_info_msg.header.frame_id = "CameraTop_optical_frame";
   cam_info_msg.width = 320;
   cam_info_msg.height = 240;
-  cam_info_msg.K = boost::array<double, 9>{{ 303.25664394894363, 0.0, 159.6976697442768, 0.0, 303.2404935719713, 120.71776202232664, 0.0, 0.0, 1.0}};
+  cam_info_msg.K = boost::array<double, 9>{{ 298.447625, 0.000000, 163.702607, 0.000000, 296.907339, 117.838989, 0.000000, 0.000000, 1.000000}};
   cam_info_msg.distortion_model = "plumb_bob";
-  cam_info_msg.D = boost::assign::list_of(0.1059750269439819)(-0.31347801100735356)(0.0032734277592480435)(-0.0030252800461167627)(0).convert_to_container<std::vector<double> >();
+  cam_info_msg.D = boost::assign::list_of(0.084654)(-0.206041)(-0.004684)(-0.000269)(0).convert_to_container<std::vector<double> >();
   cam_info_msg.R = boost::array<double, 9>{{ 1, 0, 0, 0, 1, 0, 0, 0, 1 }};
-  cam_info_msg.P = boost::array<double, 12>{{ 303.92913818359375, 0.0, 158.39536744215366, 0.0, 0.0, 304.964111328125, 120.71489105448563, 0.0, 0.0, 0.0, 1.0, 0.0}};
+  cam_info_msg.P = boost::array<double, 12>{{ 299.896332, 0.000000, 163.196077, 0.000000, 0.000000, 298.264801, 116.612658, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000}};
   return cam_info_msg;
 }
 
@@ -181,11 +181,11 @@ inline sensor_msgs::CameraInfo createCameraInfoDEPTHQVGA()
   cam_info_msg.header.frame_id = "CameraDepth_optical_frame";
   cam_info_msg.width = 320;
   cam_info_msg.height = 240;
-  cam_info_msg.K = boost::array<double, 9>{{ 286.59153380143124, 0.0, 156.53042249289487, 0.0, 287.3114813532127, 124.51255156139239, 0.0, 0.0, 1.0}};
+  cam_info_msg.K = boost::array<double, 9>{{ 282.502591, 0.000000, 156.329220, 0.000000, 283.375953, 123.201969, 0.000000, 0.000000, 1.000000}};
   cam_info_msg.distortion_model = "plumb_bob";
-  cam_info_msg.D = boost::assign::list_of(-0.00017093325121445173)(-0.06753399487353239)(-0.0033665258755008714)(-0.0036992519597632244)(0.0);
+  cam_info_msg.D = boost::assign::list_of(-0.020351)(0.011206)(-0.001919)(-0.002940)(0.0);
   cam_info_msg.R = boost::array<double, 9>{{ 1, 0, 0, 0, 1, 0, 0, 0, 1 }};
-  cam_info_msg.P = boost::array<double, 12>{{ 283.6895751953125, 0.0, 154.89636915262963, 0.0, 0.0, 285.74261474609375, 123.5099099209092, 0.0, 0.0, 0.0, 1.0, 0.0}};
+  cam_info_msg.P = boost::array<double, 12>{{ 280.113068, 0.000000, 154.972158, 0.000000, 0.000000, 281.466125, 122.390019, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000}};
   return cam_info_msg;
 }
 
