@@ -1,10 +1,6 @@
 <launch>
-<!--  <node pkg="tf" name="depth_to_top_camera_frame_publisher" type="static_transform_publisher" args="0.039 0.044 0.035 0.000 0.000 0.000 CameraTop_optical_frame CameraDepth_optical_frame 1"/>
-  <node pkg="tf" name="depth_to_top_camera_frame_publisher" type="static_transform_publisher" args="-0.05 0.12 0.0 0.0 0.0 -0.07 CameraTop_optical_frame CameraDepth_optical_frame 1"/>
-  
--->
-  <node pkg="tf" name="depth_to_top_camera_frame_publisher" type="static_transform_publisher" args="-0.035 0.03 0.035 0.0 0.0 -0.07 CameraTop_optical_frame CameraDepth_optical_frame 1"/>
-  
+  <node pkg="tf" name="depth_to_top_camera_frame_publisher" type="static_transform_publisher" args="-0.03659929 0.04089561 -0.0206825 -0.01224383 -0.00762074 0.01041084 0.9998418 CameraTop_optical_frame CameraDepth_optical_frame 1"/>
+
   <node pkg="image_proc" type="image_proc" name="rgb_processing" output="screen" ns="/naoqi_driver_node/camera/front" />
 
   <node pkg="nodelet" type="nodelet" name="register_depth" output="screen"
@@ -25,5 +21,7 @@
   </node>
 </launch>
 
-
+<!--
+  vim: filetype=xml
+-->
 
