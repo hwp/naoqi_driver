@@ -15,8 +15,8 @@
  *
 */
 
-#ifndef PEOPLE_EVENT_CONVERTER_HPP
-#define PEOPLE_EVENT_CONVERTER_HPP
+#ifndef SOUND_EVENT_CONVERTER_HPP
+#define SOUND_EVENT_CONVERTER_HPP
 
 /*
 * LOCAL includes
@@ -27,9 +27,7 @@
 /*
 * ROS includes
 */
-#include <nao_interaction_msgs/FaceDetectedArray.h>
-#include <nao_interaction_msgs/PersonDetectedArray.h>
-
+#include <nao_interaction_msgs/AudioSourceLocalization.h>
 /*
 * ALDEBARAN includes
 */
@@ -40,15 +38,15 @@ namespace naoqi{
 namespace converter{
 
 template <class T>
-class PeopleEventConverter : public BaseConverter<PeopleEventConverter<T> >
+class SoundEventConverter : public BaseConverter<SoundEventConverter<T> >
 {
 
   typedef boost::function<void(T&) > Callback_t;
 
 public:
-  PeopleEventConverter(const std::string& name, const float& frequency, const qi::SessionPtr& session);
+  SoundEventConverter(const std::string& name, const float& frequency, const qi::SessionPtr& session);
 
-  ~PeopleEventConverter();
+  ~SoundEventConverter();
 
   virtual void reset();
 

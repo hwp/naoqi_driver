@@ -62,6 +62,7 @@ inline sensor_msgs::CameraInfo createCameraInfoTOPQVGA()
   cam_info_msg.D = boost::assign::list_of(0.084654)(-0.206041)(-0.004684)(-0.000269)(0).convert_to_container<std::vector<double> >();
   cam_info_msg.R = boost::array<double, 9>{{ 1, 0, 0, 0, 1, 0, 0, 0, 1 }};
   cam_info_msg.P = boost::array<double, 12>{{ 299.896332, 0.000000, 163.196077, 0.000000, 0.000000, 298.264801, 116.612658, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000}};
+
   return cam_info_msg;
 }
 
@@ -186,6 +187,7 @@ inline sensor_msgs::CameraInfo createCameraInfoDEPTHQVGA()
   cam_info_msg.D = boost::assign::list_of(-0.020351)(0.011206)(-0.001919)(-0.002940)(0.0);
   cam_info_msg.R = boost::array<double, 9>{{ 1, 0, 0, 0, 1, 0, 0, 0, 1 }};
   cam_info_msg.P = boost::array<double, 12>{{ 280.113068, 0.000000, 154.972158, 0.000000, 0.000000, 281.466125, 122.390019, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000}};
+
   return cam_info_msg;
 }
 

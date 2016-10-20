@@ -18,7 +18,7 @@
 /*
 * LOCAL includes
 */
-#include "people.hpp"
+#include "sound.hpp"
 
 /*
 * BOOST includes
@@ -31,28 +31,28 @@ namespace naoqi{
 namespace converter{
 
 template <class T>
-PeopleEventConverter<T>::PeopleEventConverter(const std::string& name, const float& frequency, const qi::SessionPtr& session)
-  : BaseConverter<PeopleEventConverter<T> >(name, frequency, session)
+SoundEventConverter<T>::SoundEventConverter(const std::string& name, const float& frequency, const qi::SessionPtr& session)
+  : BaseConverter<SoundEventConverter<T> >(name, frequency, session)
 {
 }
 
 template <class T>
-PeopleEventConverter<T>::~PeopleEventConverter() {
+SoundEventConverter<T>::~SoundEventConverter() {
 }
 
 template <class T>
-void PeopleEventConverter<T>::reset()
+void SoundEventConverter<T>::reset()
 {
 }
 
 template <class T>
-void PeopleEventConverter<T>::registerCallback( const message_actions::MessageAction action, Callback_t cb )
+void SoundEventConverter<T>::registerCallback( const message_actions::MessageAction action, Callback_t cb )
 {
   callbacks_[action] = cb;
 }
 
 template <class T>
-void PeopleEventConverter<T>::callAll(const std::vector<message_actions::MessageAction>& actions, T& msg)
+void SoundEventConverter<T>::callAll(const std::vector<message_actions::MessageAction>& actions, T& msg)
 {
   msg_ = msg;
   for_each( message_actions::MessageAction action, actions )
@@ -62,8 +62,7 @@ void PeopleEventConverter<T>::callAll(const std::vector<message_actions::Message
 }
 
 // http://stackoverflow.com/questions/8752837/undefined-reference-to-template-class-constructor
-template class PeopleEventConverter<nao_interaction_msgs::FaceDetectedArray>;
-template class PeopleEventConverter<nao_interaction_msgs::PersonDetectedArray>;
+template class SoundEventConverter<nao_interaction_msgs::AudioSourceLocalization>;
 }
 
 }

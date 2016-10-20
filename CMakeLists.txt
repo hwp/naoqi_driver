@@ -20,6 +20,9 @@ set(
   src/converters/memory/string.cpp
   src/converters/sonar.cpp
   src/converters/log.cpp
+  src/converters/battery.cpp
+  src/converters/odom.cpp
+  src/converters/sound.cpp
   )
 set(
   TOOLS_SRC
@@ -41,11 +44,15 @@ set(
   src/subscribers/teleop.cpp
   src/subscribers/moveto.cpp
   src/subscribers/speech.cpp
+  src/subscribers/animated_speech.cpp
+  src/subscribers/play_animation.cpp
   )
 
 set(
   SERVICES_SRC
   src/services/robot_config.cpp
+  src/services/behavior_manager.cpp
+  src/services/localization.cpp
   )
 
 set(
@@ -67,6 +74,7 @@ set(
   src/event/audio.cpp
   src/event/touch.cpp
   src/event/people.cpp
+  src/event/sound.cpp
   )
 
 # use catkin if qibuild is not found
